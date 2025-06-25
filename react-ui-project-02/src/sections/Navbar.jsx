@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { socials } from "../constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -100,13 +101,21 @@ const Navbar = () => {
         className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
       >
         <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
-          {["home", "service", "about", "work", "contact"].map((section, index) => (
-            <div key={index} ref={(el) => (linksRef.current[index] = el)}>
-              <a className="transition-all duration-300 cursor-pointer hover:text-white">
-                {section}
-              </a>
-            </div>
-          ))}
+          {["home", "services", "about", "work", "contact"].map(
+            (section, index) => (
+              <div key={index} ref={(el) => (linksRef.current[index] = el)}>
+                <Link
+                  className="transition-all duration-300 cursor-pointer hover:text-white"
+                  to={`${section}`}
+                  smooth
+                  offset={0}
+                  duration={2000}
+                >
+                  {section}
+                </Link>
+              </div>
+            )
+          )}
         </div>
 
         <div
@@ -131,7 +140,9 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="text-sm leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300"
                 >
+                  {"{ "}
                   {social.name}
+                  {" }"}
                 </a>
               ))}
             </div>
@@ -139,11 +150,12 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ✅ BURGER ICON DENGAN CLIPPATH */}
       <div
         onClick={toggleMenu}
         style={{
-          clipPath: showBurger ? "circle(50% at 50% 50%)" : "circle(0% at 50% 50%)",
+          clipPath: showBurger
+            ? "circle(50% at 50% 50%)"
+            : "circle(0% at 50% 50%)",
         }}
         className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
       >

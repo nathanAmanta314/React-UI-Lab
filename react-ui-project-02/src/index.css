@@ -6,7 +6,7 @@
 @font-face {
   font-family: "Amiamie";
   src: url("/fonts/otf/Amiamie-Regular.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-Regular.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 @font-face {
   font-family: "Amiamie";
   src: url("/fonts/otf/Amiamie-Italic.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-Italic.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -24,7 +24,7 @@
 @font-face {
   font-family: "Amiamie";
   src: url("/fonts/otf/Amiamie-Light.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-Light.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,7 @@
 @font-face {
   font-family: "Amiamie";
   src: url("/fonts/otf/Amiamie-LightItalic.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-LightItalic.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -42,7 +42,7 @@
 @font-face {
   font-family: "Amiamie";
   src: url("/fonts/otf/Amiamie-Black.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-Black.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -51,7 +51,7 @@
 @font-face {
   font-family: "Amiamie";
   src: url("/fonts/otf/Amiamie-BlackItalic.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-BlackItalic.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -60,7 +60,7 @@
 @font-face {
   font-family: "Amiamie-Round";
   src: url("/fonts/otf/Amiamie-RegularRound.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-RegularRound.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-RegularRound.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -69,7 +69,7 @@
 @font-face {
   font-family: "Amiamie-Round";
   src: url("/fonts/otf/Amiamie-BlackRound.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-BlackRound.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-BlackRound.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -78,7 +78,7 @@
 @font-face {
   font-family: "Amiamie-Round";
   src: url("/fonts/otf/Amiamie-BlackItalicRound.otf") format("opentype"),
-       url("/fonts/ttf/Amiamie-BlackItalicRound.ttf") format("truetype");
+    url("/fonts/ttf/Amiamie-BlackItalicRound.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -118,7 +118,7 @@ body {
   }
 
   .banner-text-responsive {
-    @apply text-[68px] sm:text-[118px] md:text-[126px] lg:text-[152px] leading-9 sm:leading-[4rem] lg:leading-[5rem];
+    @apply text-[68px] sm:text-[118px] md:text-[126px] lg:text-[152px] leading-[3rem] sm:leading-[5rem] lg:leading-[6rem];
   }
 
   .value-text-responsive {
