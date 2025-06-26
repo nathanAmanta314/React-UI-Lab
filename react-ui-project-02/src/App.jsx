@@ -1,13 +1,18 @@
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
-import "./index.css"; // Import your global CSS file
+import "./index.css"; 
+import ServiceSummary from "./sections/ServiceSummary";
+import Services from "./sections/Services";
+import ReactLenis from "lenis/react";
 
 function App() {
   return (
-    <div className="relative w-screen min-h-screen overflow-x-auto">
+    <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
       <Navbar />
       <Hero />
-    </div>
+      <ServiceSummary/>
+    <Services/>
+    </ReactLenis>
   );
 }
 

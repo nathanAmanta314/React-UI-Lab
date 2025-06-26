@@ -1,76 +1,32 @@
-import { useRef } from "react";
-import AnimatedTextLine from "../components/AnimatedTextLine";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { Canvas } from "@react-three/fiber";
 import { Planet } from "../components/Planet";
 import { AmbientLight } from "three";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
+import { AnimatedHeaderSection } from "../components/AnimatedHeaderSection";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
-  const contextRef = useRef(null);
-  const headerRef = useRef(null);
+  const text = ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
+                  esse. Modi ea temporibus veniam, iusto at libero harum quibusdam
+                  officiis velit sapiente blanditiis amet iure 
+                  a magni voluptatem nostrum maxime!`;
 
-  const aboutText = ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
-              esse. Modi ea temporibus veniam, iusto at libero harum quibusdam
-              officiis velit sapiente blanditiis amet iure 
-              a magni voluptatem nostrum maxime!`;
-
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(contextRef.current, {
-      y: "50vh",
-      duration: 1,
-      ease: "circ.out",
-    });
-    tl.from(
-      headerRef.current,
-      {
-        opacity: 0,
-        y: "200",
-        duration: 1,
-        ease: "circ.out",
-      },
-      "<+0.2"
-    );
-  }, []);
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">
-      <div ref={contextRef}>
-        <div style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}>
-          <div
-            ref={headerRef}
-            className="flex flex-col justify-center gap-12 pt-16 sm:gap-16 "
-          >
-            <p className="text-sm font-light tracking-[0.5rem] uppercase px-10 text-black">
-              404 - PAGE NOT FOUND
-            </p>
-            <div className="px-10">
-              <h1 className="flex flex-col flex-wrap gap-12 text-black uppercase banner-text-responsive sm:gap-16 md:block">
-                Zanuar Gesit D.A
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div className="relative px-10 text-black">
-          <div className="absolute inset-x-0 border-t-2 border-black" />
-          <div className="py-12 sm:py-16 text-end">
-            <AnimatedTextLine
-              text={aboutText}
-              className="font-light uppercase value-text-responsive"
-            />
-          </div>
-        </div>
-      </div>
+      <AnimatedHeaderSection
+        subTitle={"Frontend Developer"}
+        title={"Zanuar Gesit"}
+        text={text}
+        textColor={"text-black"}
+      />
       <figure
         className="absolute inset-0 -z-50"
-        style={{ width: "100vw", height: "100bh" }}
+        style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas
           shadow
-          camera={{ position: [0, 0, 10], fov: 17.5, near: 1, far: 20 }}
+          camera={{ position: [0, 0, -10], fov: 17.5, near: 1, far: 20 }}
         >
           <ambientLight intensity={0.5} />
           <Float speed={0.5}>
@@ -81,7 +37,7 @@ const Hero = () => {
               <Lightformer
                 from={"circle"}
                 intensity={2}
-                position={[1, 5, -9]}
+                position={[0, 5, -9]}
                 scale={10}
               />
               <Lightformer
