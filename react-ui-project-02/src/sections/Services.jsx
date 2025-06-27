@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { AnimatedHeaderSection } from "../components/AnimatedHeaderSection";
+import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { servicesData } from "../constants";
 import { div } from "three/tsl";
 import { useMediaQuery } from "react-responsive";

@@ -3,7 +3,7 @@ import { Planet } from "../components/Planet";
 import { AmbientLight } from "three";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-import { AnimatedHeaderSection } from "../components/AnimatedHeaderSection";
+import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -25,7 +25,7 @@ const Hero = () => {
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas
-          shadow
+          shadows
           camera={{ position: [0, 0, -10], fov: 17.5, near: 1, far: 20 }}
         >
           <ambientLight intensity={0.5} />

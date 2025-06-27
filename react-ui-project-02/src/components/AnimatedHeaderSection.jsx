@@ -2,7 +2,9 @@ import { useRef } from "react";
 import AnimatedTextLine from "../components/AnimatedTextLine";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-export const AnimatedHeaderSection = ({
+import React from "react";
+
+const AnimatedHeaderSection = ({
   subTitle,
   title,
   text,
@@ -69,3 +71,5 @@ export const AnimatedHeaderSection = ({
     </div>
   );
 };
+
+export default AnimatedHeaderSection;

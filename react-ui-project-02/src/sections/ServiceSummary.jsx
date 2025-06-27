@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiceSummary=()=> {
     useGSAP(() => {
         gsap.to("#title-service-1", {
-          xPercent: 0,
+          xPercent: 20,
           scrollTrigger: {
             target: "#title-service-1",
             scrub: true,
