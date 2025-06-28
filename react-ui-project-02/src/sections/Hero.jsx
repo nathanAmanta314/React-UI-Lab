@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Planet } from "../components/Planet";
 import { AmbientLight } from "three";
-import { Environment, Float, Lightformer } from "@react-three/drei";
+import { Environment, Float, Lightformer } from "@react-three/drei"; 
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 
@@ -9,7 +9,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   const text = ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta,
                   esse. Modi ea temporibus veniam, iusto at libero harum quibusdam
-                  officiis velit sapiente blanditiis amet iure 
+                  officiis velit sapiente blanditiis amet iure
                   a magni voluptatem nostrum maxime!`;
 
   return (

@@ -24,16 +24,16 @@ function Work() {
     });
 
     gsap.from("#project", {
-      y:100,
+      y: 100,
       opacity: 0,
-      delay:0.5,
+      delay: 0.5,
       duration: 1,
-      stagger:0.3,
+      stagger: 0.3,
       ease: "back.out",
       scrollTrigger: {
         trigger: "#project",
       },
-    })
+    });
   });
   const handleMouseEnter = (index) => {
     if (window.innerWidth < 768) return;
@@ -66,15 +66,11 @@ function Work() {
     const el = overlayRefs.current[index];
     if (!el) return;
     gsap.killTweensOf(el);
-    gsap.to(
-      el,
-      {
-        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-         duration: 0.2,
-        ease: "power2.in"
-      },
-      
-    );
+    gsap.to(el, {
+      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+      duration: 0.2,
+      ease: "power2.in",
+    });
     gsap.to(previewRef.current, {
       opacity: 0,
       scale: 0.95,

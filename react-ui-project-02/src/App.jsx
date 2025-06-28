@@ -6,6 +6,7 @@ import Navbar from "./sections/Navbar";
 import ServiceSummary from "./sections/ServiceSummary";
 import Services from "./sections/Services";
 import Work from "./sections/Work";
+import ContactSummary from './sections/ContactSummary';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Services/>
     <About/>
     <Work/>
+    <ContactSummary />
     </ReactLenis>
   );
 }
