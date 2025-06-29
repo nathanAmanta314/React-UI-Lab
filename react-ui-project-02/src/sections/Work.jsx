@@ -1,9 +1,9 @@
+import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import gsap from "gsap";
+import { useRef, useState } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { projects } from "../constants";
-import { useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 function Work() {
   const [currentIndex, setCurrentIndex] = useState(null);

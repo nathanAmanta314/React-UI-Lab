@@ -1,11 +1,10 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { servicesData } from "../constants";
-import { div } from "three/tsl";
-import { useMediaQuery } from "react-responsive";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
-import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
   const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.`;

@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { socials } from "../constants";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
+import { socials } from "../constants";
 
 const Navbar = () => {
   const navRef = useRef(null);
