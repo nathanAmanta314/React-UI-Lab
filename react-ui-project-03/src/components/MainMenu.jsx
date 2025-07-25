@@ -9,7 +9,7 @@ const MainMenu = () => {
           <li className=" cursor-pointer">Statistics</li>
           <li className=" cursor-pointer">Team Profile</li>
         </ul>
-        <button className=' border-solid border-black rounded-full py-2 px-6 bg-white text-black'>
+        <button className=" border-solid border-black rounded-full py-2 px-6 bg-white text-black">
           Back
         </button>
       </nav>
