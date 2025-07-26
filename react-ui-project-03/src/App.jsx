@@ -11,20 +11,20 @@ const teams = [
     bgColor: "#A6051A",
     carImg: "/2025ferraricarright.jpg",
     teamStyle: {
-      fontSize: "440px",
+      fontSize: "500px",
       marginBottom: "10rem",
     },
   },
   {
     number: "02",
-    team: "RED BULL RACING",
+    team: "RED BULL",
     driver: "Max Verstappen & Yuki Tsunoda",
     textColor: "#CC1E4A",
     bgColor: "#121F45",
     carImg: "/2025redbullracingcarright.jpg",
     teamStyle: {
-      fontSize: "200px",
-      marginBottom: "20rem",
+      fontSize: "280px",
+      marginBottom: "10rem",
     },
   },
   {
@@ -35,7 +35,7 @@ const teams = [
     bgColor: "#FF8000",
     carImg: "/2025mclarencarright.jpg",
     teamStyle: {
-      fontSize: "300px",
+      fontSize: "100px",
       marginBottom: "14rem",
     },
   },
@@ -72,7 +72,10 @@ const App = () => {
   return (
     <div className="overflow-hidden">
       {selectedTeam ? (
-        <MainMenu />
+        <MainMenu
+          teamData={selectedTeam}
+          onBack={handleBack}
+          isTransitioning={isTransitioning} />
       ) : (
         <CarMenu
           carData={teams}

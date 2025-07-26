@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Formula1Bold';
+  src: url('/fonts/Formula1-Bold_web_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formula1Regular';
+  src: url('/fonts/Formula1-Regular_web_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
