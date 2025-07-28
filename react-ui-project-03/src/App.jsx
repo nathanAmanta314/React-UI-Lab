@@ -10,10 +10,9 @@ const teams = [
     textColor: "#FFEB00",
     bgColor: "#A6051A",
     carImg: "/2025ferraricarright.jpg",
-    teamStyle: {
-      fontSize: "500px",
-      marginBottom: "10rem",
-    },
+
+    fontSize: "500px",
+    marginBottom: "10rem",
   },
   {
     number: "02",
@@ -22,10 +21,9 @@ const teams = [
     textColor: "#CC1E4A",
     bgColor: "#121F45",
     carImg: "/2025redbullracingcarright.jpg",
-    teamStyle: {
-      fontSize: "280px",
-      marginBottom: "10rem",
-    },
+
+    fontSize: "300px",
+    marginBottom: "10rem",
   },
   {
     number: "03",
@@ -34,10 +32,9 @@ const teams = [
     textColor: "#000000",
     bgColor: "#FF8000",
     carImg: "/2025mclarencarright.jpg",
-    teamStyle: {
-      fontSize: "100px",
-      marginBottom: "14rem",
-    },
+
+    fontSize: "100px",
+    marginBottom: "14rem",
   },
   {
     number: "04",
@@ -46,10 +43,9 @@ const teams = [
     textColor: "#c6c6c6",
     bgColor: "#00A19C",
     carImg: "/2025mercedescarright.jpg",
-    teamStyle: {
-      fontSize: "300px",
-      marginBottom: "12rem",
-    },
+
+    fontSize: "300px",
+    marginBottom: "12rem",
   },
 ];
 
@@ -75,7 +71,8 @@ const App = () => {
         <MainMenu
           teamData={selectedTeam}
           onBack={handleBack}
-          isTransitioning={isTransitioning} />
+          isTransitioning={isTransitioning}
+        />
       ) : (
         <CarMenu
           carData={teams}
