@@ -127,7 +127,7 @@ const CarCard = ({
         rotate: 0,
         scale: 0.789,
         x: -10,
-        y: 48,
+        y: 110,
         duration: 1,
         ease: "power2.out",
       },

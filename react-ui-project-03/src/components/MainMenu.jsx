@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
-import DriverCard from './DriverCard';
+import DriverCard from "./DriverCard";
 
 const MainMenu = ({ teamData, onBack, isTransitioning }) => {
   const navRef = useRef();
@@ -60,7 +60,7 @@ const MainMenu = ({ teamData, onBack, isTransitioning }) => {
           Back
         </button>
       </nav>
-      <div className="flex justify-center items-center mx-[25%] my-[25%]">
+      <div className="relative flex flex-col items-center justify-center py-32 h-screen">
         <h1
           ref={titleRef}
           className="absolute font-bold mb-[25rem] "
@@ -97,127 +97,11 @@ const MainMenu = ({ teamData, onBack, isTransitioning }) => {
         </h1>{" "}
       </div>
 
-      <section
-        className="px-6 md:px-16 py-12"
-        style={{
-          color: teamData.textColor,
-          backgroundColor: teamData.backgroundColor,
-        }}
-      >
-        <h2 className="text-4xl md:text-5xl font-bold mb-10 border-b  pb-2">
-          Team Profile
-        </h2>
+      <DriverCard />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-white/90">
-          <div>
-            <p className="text-lg text-white/70">Full Team Name</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "Scuderia Ferrari HP"
-                : teamData.team === "RED BULL"
-                ? "Oracle Red Bull Racing"
-                : teamData.team === "MCLAREN"
-                ? "McLaren Formula 1 Team"
-                : teamData.team === "MERCEDES"
-                ? "Mercedes-AMG PETRONAS F1 Team"
-                : teamData.team}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">Base</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "Maranello, Italy"
-                : teamData.team === "RED BULL"
-                ? "Milton Keynes, UK"
-                : teamData.team === "MCLAREN"
-                ? "Woking, UK"
-                : teamData.team === "MERCEDES"
-                ? "Brackley, UK"
-                : "Unknown"}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">Team Principal</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "Frédéric Vasseur"
-                : teamData.team === "RED BULL"
-                ? "Christian Horner"
-                : teamData.team === "MCLAREN"
-                ? "Andrea Stella"
-                : teamData.team === "MERCEDES"
-                ? "Toto Wolff"
-                : "Unknown"}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">Power Unit</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "Ferrari"
-                : teamData.team === "RED BULL"
-                ? "Honda RBPT"
-                : teamData.team === "MCLAREN"
-                ? "Mercedes"
-                : teamData.team === "MERCEDES"
-                ? "Mercedes"
-                : "Unknown"}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">Chassis</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "SF-25"
-                : teamData.team === "RED BULL"
-                ? "RB21"
-                : teamData.team === "MCLAREN"
-                ? "MCL39"
-                : teamData.team === "MERCEDES"
-                ? "W16"
-                : "Unknown"}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">First Team Entry</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "1950"
-                : teamData.team === "RED BULL"
-                ? "2005"
-                : teamData.team === "MCLAREN"
-                ? "1966"
-                : teamData.team === "MERCEDES"
-                ? "2010"
-                : "Unknown"}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">World Championships</p>
-            <p className="text-2xl font-semibold">
-              {teamData.team === "FERRARI"
-                ? "16"
-                : teamData.team === "RED BULL"
-                ? "6"
-                : teamData.team === "MCLAREN"
-                ? "8"
-                : teamData.team === "MERCEDES"
-                ? "8"
-                : "0"}
-            </p>
-          </div>
-          <div>
-            <p className="text-lg text-white/70">Drivers</p>
-            <p className="text-2xl font-semibold">{teamData.driver}</p>
-          </div>
-        </div>
-      </section>
-      <DriverCard/>
     </div>
 
   );
-
 };
 
 export default MainMenu;
