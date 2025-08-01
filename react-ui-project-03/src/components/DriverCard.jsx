@@ -9,6 +9,7 @@ const drivers = [
     img: "/driver/leclerc.jpg",
     bg: "/driver/lerler.jpg",
     desc: "Monégasque, cepat, agresif, 5x GP Winner.",
+    photo: "/driver/lecler2.jpg",
     stats: [
       { label: "GP Wins", value: 5 },
       { label: "Pole Positions", value: 24 },
@@ -28,13 +29,14 @@ const drivers = [
       quote:
         "WHATEVER THE POSITION IS AT STAKE, YOU'VE GOT TO DO YOUR ABSOLUTE BEST AS A DRIVER WHETHER YOU'RE FIGHTING FOR THE FIFTH, FOURTH OR FIRST POSITION.",
       story:
-        "Born in the Mediterranean idyll of Monaco, Leclerc arrived in F1 on a tidal wave of expectation.\n\nPractically peerless on his way to the GP3 and Formula 2 crowns, he showcased a dazzling array of skills from scorching pole positions, commanding victories – even when his car caught fire twice at Silverstone – to an ability to muscle his way through the pack. Winning back-to-back championships also taught Leclerc how to handle pressure, another useful tool in the big pond of Formula 1 racing.\n\nStepping up to F1 in 2018, Leclerc showed flashes of ballistic pace on Saturdays and racing brilliance on Sundays, dragging his Sauber beyond its limits – and earning himself a money-can’t-buy race seat at Ferrari for 2019, stepping into the shoes of the Scuderia’s last world champion, Kimi Raikkonen.\n\nThere he immediately put the cat among the proverbial pigeons, unafraid to go wheel-to-wheel with established number one, Sebastian Vettel. A maiden F1 victory at Spa was followed by another a week later on Ferrari’s hallowed home turf of Monza. The tifosi had found another new hero – who then became the first man to out-score Vettel over a season with the Scuderia, a feat he repeated in crushing fashion the following year.\n\nThe 2020 and ’21 seasons bore little fruit for Ferrari, but Leclerc maintained his resolve to emerge a true title contender in 2022. With three wins, 11 podiums and nine pole positions, he was the only man able to consistently take the fight to champion Max Verstappen - a feat he and the Scuderia were sadly unable to repeat in subsequent campaigns.\n\nOut of the car, Leclerc is modest and thoughtful - but then he is on his own very personal mission. This exciting young talent is racing for his late father Herve and his friend and mentor Jules Bianchi, the F1 driver who died in 2015.\n\nOn the evidence so far, he is doing them both proud.",
+        "Charles Leclerc, pembalap asal Monaco, tiba di F1 dengan reputasi mentereng setelah menjuarai GP3 dan Formula 2. Dikenal dengan kemampuannya mencetak pole position dan memenangkan balapan, ia juga terbukti mampu mengatasi tekanan.\n\nPada 2018, Leclerc debut di F1 bersama tim Sauber dan menunjukkan performa impresif yang membuatnya dilirik Ferrari. Ia bergabung dengan tim Scuderia pada 2019, menggantikan Kimi Raikkonen. Di sana, ia langsung tampil menantang Sebastian Vettel, memenangkan balapan perdananya di Spa dan diikuti kemenangan di Monza. Ia menjadi pembalap pertama yang mengalahkan perolehan poin Vettel dalam satu musim bersama Ferrari.\n\nPada musim 2022, Leclerc menjadi penantang serius bagi Max Verstappen, meraih tiga kemenangan dan sembilan pole position. Sayangnya, ia dan tim Ferrari gagal mengulang performa tersebut di musim berikutnya.\n\nDi luar lintasan, Leclerc dikenal rendah hati. Ia memiliki motivasi kuat untuk balapan demi mendiang ayahnya, Hervé, dan mentornya, Jules Bianchi.",
     },
   },
   {
     name: "Lewis Hamilton",
     img: "/driver/lewis.jpeg",
     bg: "/driver/lewis.jpeg",
+    photo: "/driver/lewiss.jpg",
     desc: "Legenda F1, 7x World Champion. Bergabung Ferrari 2025.",
     stats: [
       { label: "GP Wins", value: 103 },
@@ -62,6 +64,7 @@ const drivers = [
 ];
 
 const DataTeam = {
+  bg: "/driver/ferrarii.jpg",
   name: "Scuderia Ferrari",
   logo: "/teams/ferrari-logo.png",
   summaryStats: [
@@ -107,6 +110,32 @@ const DriverCard = () => {
           <h1 className="text-[200px] text-red-800 font-black ">FERRARI</h1>
         </div>
       </section>
+      <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-black">
+        <div className="text-white text-center">
+          <img
+            src={DataTeam.bg}
+            alt="Logo"
+            className=" absolute object-cover w-full h-full left-0 top-0"
+          />
+          <div className="absolute text-red-800 text-justify mt-[17rem]  bg-white/15 p-4 rounded-xl">
+            <h1 className="text-5xl font-bold mb-4">{DataTeam.name}</h1>
+            <p className="max-w-4xl mx-auto text-lg leading-relaxed text-left">
+              {DataTeam.description}
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-black px-8 md:px-24 py-20 text-gray-200">
+        <h2 className="text-4xl font-bold mb-6">Team History</h2>
+        <div className="grid md:grid-cols-2 gap-12">
+          {DataTeam.history.map((yearData) => (
+            <div key={yearData.year}>
+              <h3 className="text-2xl font-semibold mb-2">{yearData.year}</h3>
+              <p>{yearData.summary}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="relative w-full min-h-screen overflow-hidde items-center justify-center n flex flex-col">
         <div className="absolute top-0 left-0 w-full h-full z-0">
@@ -120,45 +149,9 @@ const DriverCard = () => {
 
         <h1 className="absolute z-10 text-[180px] font-black top-4">DRIVER</h1>
       </section>
-      <section className="bg-black px-8 md:px-24 py-20 text-gray-200">
-        <h2 className="text-4xl font-bold mb-6">Ferrari & Formula 1</h2>
-        <p className="text-lg max-w-4xl leading-relaxed">
-          For many, Ferrari and Formula 1 racing have become inseparable. The
-          only team to have competed in every season since the world
-          championship began, the Prancing Horse has grown from the humble dream
-          of founder Enzo Ferrari to become one of the most iconic and
-          recognised brands in the world. Success came quickly through the likes
-          of Alberto Ascari and John Surtees, and continued – in amongst leaner
-          times – with Niki Lauda in the 1970s and then Michael Schumacher in
-          the 2000s, when Ferrari claimed a then unprecedented five consecutive
-          title doubles, securing their status as the most successful and
-          decorated team in F1 history...
-        </p>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">2024</h3>
-            <p className="text-gray-300">
-              Team Principal Fred Vasseur’s leadership starts to gel and strong
-              campaign sees Charles Leclerc and Carlos Sainz take five wins
-              between them. Runners-up in the constructors’ standings, losing
-              out to McLaren at the final round. Lewis Hamilton signed to
-              replace Sainz for 2025.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">2023</h3>
-            <p className="text-gray-300">
-              Only team other than Red Bull to win a race – Carlos Sainz in
-              Singapore – but an otherwise frustrating campaign of mixed
-              fortunes sees team narrowly lose out to Mercedes for P2 in the
-              constructors’ table, despite six pole positions and nine podiums.
-            </p>
-          </div>
-        </div>
-      </section>
       {drivers.map((d, index) => (
-        <section key={d.name} className="relative h-screen flex items-center">
+        <section key={d.name} className="relative h-screen flex items-center ">
           <img
             src={d.bg}
             alt={d.name}
@@ -166,18 +159,53 @@ const DriverCard = () => {
           />
           <div className="absolute inset-0 bg-black/70">
             <div
-              className={`relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-8 md:px-20 ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
+              className={`relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-8 md:px-10 ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             >
-            <div className="max-w-xl text-center md:text-left mt-36">
-                <h2 className="text-5xl font-black mb-10">{d.name}</h2>
-                <p className='text-lg text-gray-300 mb-6'>{d.desc}</p>
-                <div className='grid grid-cols-2 gap-4'>
+              <div className="flex flex-col items-center justify-center -mt-[8rem]">
+                <img
+                  src={d.photo}
+                  alt={d.name}
+                  className="h-55 w-55 md:h-60 md:w-60 object-cover rounded-full"
+                />
+                <div className=" mt-6 w-full max-w-2xl ">
+                  <div className="flex flex-col items-center justify-center">
+                    {" "}
+                    <span className="text-sm text-gray-400">
+                      {d.biography.birthDate}
+                    </span>
+                    <span className="text-sm text-gray-400 mb-2">
+                      {d.biography.birthPlace}
+                    </span>
+                  </div>
+
+                  {d.biography.story.split("\n\n").map((paragraph, idx) => (
+                    <div className="items-start text-justify w-[30rem]">
+                      <p
+                        key={idx}
+                        className="mt-4 text-base leading-relaxed text-white"
+                      >
+                        {paragraph}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="max-w-xl text-center md:text-left mt-[26rem] ">
+                <h2 className="text-5xl font-black mb-20 uppercase">
+                  {d.name}
+                </h2>
+                <div className="grid grid-cols-2 gap-4">
                   {d.stats.map((s) => (
-                    <div key={s.label}>
-                      <span className='block text-3xl font-bold text-red-700' >{s.value}</span>
-                      <span className='text-sm text-gray-400'>{s.label}</span>
+                    <div key={s.label} className="">
+                      <span className="block text-4xl font-bold text-red-700">
+                        {s.value}
+                      </span>
+                      <span className="text-xl font-boldtext-gray-400">
+                        {s.label}
+                      </span>
                     </div>
                   ))}
                 </div>
