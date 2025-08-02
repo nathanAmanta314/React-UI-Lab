@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CarMenu from "./components/CarMenu";
 import MainMenu from "./components/MainMenu";
+import Hero from './components/Hero';
 
 const teams = [
   {
@@ -67,7 +68,10 @@ const App = () => {
 
   return (
     <div className="overflow-hidden">
+  <Hero/>
+
       {selectedTeam ? (
+
         <MainMenu
           teamData={selectedTeam}
           onBack={handleBack}

@@ -154,6 +154,8 @@ const CarCard = ({
       ref={containerRef}
       className="relative flex flex-col items-center justify-center w-full min-h-screen p-4 overflow-hidden bg-white transition-colors duration-500"
     >
+        <div className="absolute inset-0 bg-black/10 z-0" />
+
       <img
         ref={carImgRef}
         src={carImg}

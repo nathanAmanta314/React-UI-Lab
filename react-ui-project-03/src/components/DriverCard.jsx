@@ -117,7 +117,7 @@ const DriverCard = () => {
             alt="Logo"
             className=" absolute object-cover w-full h-full left-0 top-0"
           />
-          <div className="absolute text-red-800 text-justify mt-[17rem]  bg-white/15 p-4 rounded-xl">
+          <div className="absolute text-white text-justify mt-[17rem]  bg-black/50 p-4 rounded-xl ">
             <h1 className="text-5xl font-bold mb-4">{DataTeam.name}</h1>
             <p className="max-w-4xl mx-auto text-lg leading-relaxed text-left">
               {DataTeam.description}
