@@ -23,7 +23,7 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 "
             />
           </div>
 
@@ -42,7 +42,7 @@ const Hero = () => {
       </div>
       <div className="absolute top-1/4 z-30">
         <div className="flex px-8 items-center  jusctify-center ">
-          <h1 className="text-white text-2xl font-bold  p-2 px-4 bg-black/50 hover:bg-red-700 ">
+          <h1 className="text-white text-2xl font-bold  p-2 px-4  uppercase bg-red-700 ">
             video
           </h1>
         </div>

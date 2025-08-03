@@ -2,6 +2,7 @@ import { useState } from "react";
 import CarMenu from "./components/CarMenu";
 import MainMenu from "./components/MainMenu";
 import Hero from './components/Hero';
+import Standing from './components/Standing';
 
 const teams = [
   {
@@ -69,6 +70,7 @@ const App = () => {
   return (
     <div className="overflow-hidden">
   <Hero/>
+  <Standing/>
 
       {selectedTeam ? (
 
