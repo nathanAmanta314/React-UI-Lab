@@ -1,83 +1,154 @@
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen">
-      <img
+    <div className="relative w-full h-[91.5vh] overflow-hidden bg-black">
+     <img
         src="/driver/www.jpeg"
-        alt="bg"
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        alt="wdc"
+        className="absolute w-full h-full top-0 left-0  object-contain  "
+                    style={{ objectPosition: "center 0" }}
+
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
 
-      <div className="absolute top-0 left-0 w-full z-20 pt-4 px-4">
-        <nav className=" px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+      <nav className="relative z-50 px-6 lg:px-12 pt-8">
+        <div className="flex items-center justify-between backdrop-blur-md bg-white/5 rounded-2xl px-8 py-4 border border-white/10">
+          <div className="flex items-center">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png
-"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png"
               alt="F1 Logo"
-              className="h-8 md:h-10 object-contain"
+              className="h-10 w-auto filter brightness-0 invert transition-transform hover:scale-110"
             />
           </div>
 
-          <div className="flex-1 mx-8 max-w-md ml-[26rem]">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 "
-            />
+          <div className="hidden lg:flex flex-1 max-w-md mx-12">
+            <div className="relative w-full group">
+              <input
+                type="text"
+                placeholder="Search races, drivers, teams..."
+                className="w-full px-6 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500/50 transition-all duration-300"
+              />
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <svg
+                  className="w-5 h-5 text-white/60"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-center gap-16 text-white font-medium">
-            <ul className="hidden md:flex gap-6 text-xl">
-              <li className="hover:text-red-500 transition">Race</li>
-              <li className="hover:text-red-500 transition">Driver</li>
-              <li className="hover:text-red-500 transition">Standing</li>
-              <li className="hover:text-red-500 transition">Team</li>
+          <div className="flex items-center gap-8 ">
+            <ul className="hidden lg:flex gap-8">
+              {["Races", "Drivers", "Standings", "Teams"].map((item) => (
+                <li
+                  key={item}
+                  className="text-white/80 hover:text-white transition-all duration-300 cursor-pointer relative group"
+                >
+                  <span className="text-sm font-medium tracking-wide">
+                    {item}
+                  </span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full" />
+                </li>
+              ))}
             </ul>
-            <h1 className="hover:text-red-500 cursor-pointer transition">
+            <button className="bg-white/10 hover:bg-red-500 border border-white/20 hover:border-red-500 px-6 py-2 rounded-full text-white text-sm font-medium transition-all duration-300 backdrop-blur-sm">
               Sign In
-            </h1>
+            </button>
           </div>
-        </nav>
-      </div>
-      <div className="absolute top-1/4 z-30">
-        <div className="flex px-8 items-center  jusctify-center ">
-          <h1 className="text-white text-2xl font-bold  p-2 px-4  uppercase bg-red-700 ">
-            video
+        </div>
+      </nav>
+
+      <div className="relative z-40 flex flex-col justify-center h-full px-6 ">
+        <div className="max-w-6xl mx-10 mb-60">
+          <div className="mb-8">
+            <span className="inline-flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              Live Video
+            </span>
+          </div>
+
+          <h1 className="text-4xl lg:text-7xl font-black text-white leading-tight mb-8">
+            What To Watch For in the{" "}
+            <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
+              2025 Hungarian
+            </span>{" "}
+            Grand Prix
           </h1>
-        </div>
-        <div>
-          <h1 className="text-white text-[5.5rem] font-bold px-8 py-4 leading-tight">
-            What To Watch For in the <br /> 2025 Hungarian Grand <br />
-            Prix
-          </h1>
-        </div>
-      </div>
-      <div className="absolute top-[80%] left-[52%]  z-30">
-        <div className="flex flex-row gap-2">
-          <div className="flex flex-col gap-2 ">
-            <div className="flex flex-col bg-black/50 text-white px-8 py-4 hover:bg-red-700">
-              <h1>Highlights</h1>
-              <h2>Relive Hungarian GP Qualifying as Leclerc takes pole</h2>
+
+          <button
+
+            className="group relative inline-flex items-center gap-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full px-8 py-4 transition-all duration-300 hover:scale-105"
+          >
+            <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors">
+              <svg
+                className="w-5 h-5 text-white ml-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
-            <div className="flex flex-col bg-black/50 text-white px-8 py-4 hover:bg-red-700 transition">
-              <h2>Leclerc stunned by unexpected pole in Hungary</h2>
-            </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-col bg-black/50 text-white px-8 py-4 hover:bg-red-700 transition">
-              <h2>ECH TALK – The final updates before summer</h2>
-            </div>
-            <div className="flex flex-col bg-black/50 text-white px-8 py-4 hover:bg-red-700 transition">
-              <h2>Mekies reflects on Verstappen staying at Red Bulle</h2>
-            </div>
-            <div className="flex flex-col bg-black/50 text-white px-8 py-4 hover:bg-red-700 transition">
-              <h1>Exclusive</h1>
-              <h2>Elkann on Ferrari's 2025 so far and Vasseur's contract</h2>
-            </div>
-          </div>
+            <span className="text-white font-medium">Watch Highlights</span>
+          </button>
         </div>
       </div>
+
+      <div className="absolute bottom-12 right-12 z-50 hidden xl:block">
+        <div className="space-y-4 ">
+          {[
+            {
+              type: "Highlights",
+              title: "Leclerc takes pole position in Hungary",
+            },
+            {
+              type: "Analysis",
+              title: "Tech Talk – Final updates before summer",
+            },
+            {
+              type: "Exclusive",
+              title: "Verstappen reflects on Red Bull future",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className= " w-80 bg-black/40 backdrop-blur-md border border-white/10  p-6  hover:bg-black transition-all duration-300 cursor-pointer "
+            >
+              <div className="flex justify-between items-start mb-3">
+                <span className="text-red-500 text-xs font-semibold uppercase tracking-wide">
+                  {item.type}
+                </span>
+                <svg
+                  className="w-4 h-4 text-white/60 "
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-white text-sm font-medium leading-relaxed">
+                {item.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
     </div>
   );
 };

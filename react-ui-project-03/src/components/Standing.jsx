@@ -32,7 +32,9 @@ const Standing = () => {
         <h1 className="absolute top-[6%] -right-0 z-20 text-[2.5rem] text-white font-bold bg-black/50 px-8 py-2 uppercase hover:bg-red-700 ">
           World Drivers Championship
         </h1>
+
       </div>
+ 
       <div className="absolute top-0 left-0 right-0 z-10 px-10 bg-black/50 text-white w-full h-full font-bold"></div>
       <div className="absolute top-[36rem] left-0 right-0 z-20 px-10 text-white font-bold">
         <div className="flex flex-wrap justify-between gap-6">
