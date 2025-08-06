@@ -1,8 +1,10 @@
 import { useState } from "react";
 import CarMenu from "./components/CarMenu";
+import Hero from "./components/Hero";
 import MainMenu from "./components/MainMenu";
-import Hero from './components/Hero';
-import Standing from './components/Standing';
+import Schedule from "./components/Schedule";
+import Standing from "./components/Standing";
+import Footer from "./components/footer";
 
 const teams = [
   {
@@ -57,6 +59,7 @@ const App = () => {
 
   const handleTeamSelect = (teamData) => {
     setSelectedTeam(teamData);
+
   };
 
   const handleBack = () => {
@@ -69,11 +72,12 @@ const App = () => {
 
   return (
     <div className="overflow-hidden">
-  <Hero/>
-  <Standing/>
+      <Hero />
+      <Standing />
+      <Schedule />
+      <div className="min-h-screen overflow-hidden relative">
 
       {selectedTeam ? (
-
         <MainMenu
           teamData={selectedTeam}
           onBack={handleBack}
@@ -86,6 +90,8 @@ const App = () => {
           isTransitioning={isTransitioning}
         />
       )}
+      </div>
+      <Footer />
     </div>
   );
 };

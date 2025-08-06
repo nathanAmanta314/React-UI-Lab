@@ -188,7 +188,7 @@ const Standing = () => {
       <div className="relative">
 
         <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-transparent to-transparent" />
-        
+                <div className="absolute inset-0 bg-gradient-to-tl from-red-800/20  via-transparent to-transparent z-10" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-12">
 
           <div className="mb-12">

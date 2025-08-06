@@ -59,11 +59,11 @@ const CarCard = ({
       ]);
 
       gsap.to(containerRef.current, {
-        backgroundColor: "white",
+        backgroundColor: "black",
         duration: 0.6,
       });
       gsap.to(numberRef.current, { color: bgColor, opacity: 1, duration: 0.4 });
-      gsap.to(driverRef.current, { y: 0, color: "black", duration: 0.6 });
+      gsap.to(driverRef.current, { y: 0, color: "white", duration: 0.6 });
       gsap.to(buttonRef.current, { y: 0, duration: 0.6 });
       gsap.to(buttonRef.current, { borderWidth: 1, duration: 0.4 });
       gsap.to(carImgRef.current, {
@@ -152,9 +152,8 @@ const CarCard = ({
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center w-full min-h-screen p-4 overflow-hidden bg-white transition-colors duration-500"
+      className="relative flex flex-col items-center justify-center w-full min-h-screen p-4 overflow-hidden bg-black bg-gradient-to-t from-red-800/30 to-black/30 "
     >
-        <div className="absolute inset-0 bg-black/10 z-0" />
 
       <img
         ref={carImgRef}
@@ -165,14 +164,14 @@ const CarCard = ({
       <div className="flex flex-col">
         <div
           ref={numberRef}
-          className="text-5xl font-semibold mb-7"
-          style={{ color: textColor }}
+          className="text-5xl font-semibold mb-7 "
+          style={{ color: bgColor }}
         >
           {number}
         </div>
-        <div ref={driverRef} className="flex flex-col text-black">
+        <div ref={driverRef} className="flex flex-col text-white">
           <div className="text-5xl font-bold">{team}</div>
-          <div className="text-3xl font-semibold">{driver}</div>
+          <div className="text-2xl font-semibold">{driver}</div>
         </div>
         <div className="flex flex-row mt-[7rem]">
           <button

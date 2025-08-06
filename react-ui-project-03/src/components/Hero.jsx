@@ -1,15 +1,18 @@
 const Hero = () => {
   return (
-    <div className="relative w-full h-[91.5vh] overflow-hidden bg-black">
-     <img
-        src="/driver/www.jpeg"
-        alt="wdc"
-        className="absolute w-full h-full top-0 left-0  object-contain  "
-                    style={{ objectPosition: "center 0" }}
+    <div className="relative w-full h-[91.5vh] overflow-hidden bg-black  ">
+      <div className="absolute inset-0 bg-gradient-to-tr from-red-800/30 via-transparent to-transparent z-10 pointer-events-none" />
 
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+      <div className="absolute inset-0 ">
+        <img
+          src="/driver/www.jpeg"
+          alt="wdc"
+          className="absolute w-[96%] h-[96%] object-cover object-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl z-0 transition-transform duration-300 hover:scale-105 pointer-events-auto"
+          style={{ objectPosition: "center 0" }}
+        />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" /> */}
+      </div>
 
       <nav className="relative z-50 px-6 lg:px-12 pt-8">
         <div className="flex items-center justify-between backdrop-blur-md bg-white/5 rounded-2xl px-8 py-4 border border-white/10">
@@ -67,7 +70,7 @@ const Hero = () => {
         </div>
       </nav>
 
-      <div className="relative z-40 flex flex-col justify-center h-full px-6 ">
+      <div className="relative z-40 flex flex-col justify-center h-full px-6 pointer-events-none">
         <div className="max-w-6xl mx-10 mb-60">
           <div className="mb-8">
             <span className="inline-flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase">
@@ -84,11 +87,8 @@ const Hero = () => {
             Grand Prix
           </h1>
 
-          <button
-
-            className="group relative inline-flex items-center gap-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full px-8 py-4 transition-all duration-300 hover:scale-105"
-          >
-            <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors">
+          <button className="group relative inline-flex items-center gap-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full px-8 py-4 transition-all duration-300 hover:scale-105 pointer-events-auto">
+            <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors  ">
               <svg
                 className="w-5 h-5 text-white ml-1"
                 fill="currentColor"
@@ -102,8 +102,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-12 right-12 z-50 hidden xl:block">
-        <div className="space-y-4 ">
+      <div className="absolute     bottom-12 right-12 z-50 xl:block">
+        <div className="flex flex-row   space-x-4 ">
           {[
             {
               type: "Highlights",
@@ -120,7 +120,7 @@ const Hero = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className= " w-80 bg-black/40 backdrop-blur-md border border-white/10  p-6  hover:bg-black transition-all duration-300 cursor-pointer "
+              className=" w-80 bg-black/40 backdrop-blur-md border border-white/10  p-6  hover:bg-black transition-all duration-300 cursor-pointer "
             >
               <div className="flex justify-between items-start mb-3">
                 <span className="text-red-500 text-xs font-semibold uppercase tracking-wide">
@@ -147,8 +147,6 @@ const Hero = () => {
           ))}
         </div>
       </div>
-
-
     </div>
   );
 };
